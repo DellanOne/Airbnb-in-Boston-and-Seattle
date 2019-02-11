@@ -17,8 +17,11 @@ You will also want to download [nltk](https://www.nltk.org/data.html) - directio
 For this project, I was interestested in analyzing data from AirBnB homes located in Seattle and Boston.  Specifically, I looked at the following questions:
 
 Question 1: There are several variables(features) which are related to review score such as “review_scores_rating”,”review_scores_accuracy”,”review_scores_cleanliness”,should I put all those variables into the model predicting? and if other variables have the same situation?
+
 Question 2: which features are highly related to “price”?
+
 Question 3: If you change the LinearRegression model to another model,can we have better score? The features which are the most negatively correlation of “price” will change ?
+
 Question 4: In Part 2,I will see the model built in the airbnb in Boston,will the score be better? and which features are highly related to “price”?
 
 
