@@ -46,5 +46,5 @@ The main findings of the code can be found at the [blog post available here](htt
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
-Must give credit to AirBnB and Kaggle for the data.  You can find the Licensing for the data and other descriptive information for the [Boston data on Kaggle](https://www.kaggle.com/airbnb/boston) and for the [Seattle data](https://www.kaggle.com/airbnb/seattle).  
+Must give credit to the data from udacity,and thanks for all the instructions from udacity teams.
  
