@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>【Part 2】Project 1 Boston Airbnb</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>【Part 2】Project 1 Boston Airbnb new</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -16169,8 +16169,20 @@ the propert type "Villa" has the biggest price range among other propert types.<
 <span class="kn">from</span> <span class="nn">nltk</span> <span class="k">import</span> <span class="n">sent_tokenize</span><span class="p">,</span> <span class="n">word_tokenize</span>
 <span class="kn">from</span> <span class="nn">wordcloud</span> <span class="k">import</span> <span class="n">WordCloud</span><span class="p">,</span> <span class="n">STOPWORDS</span>
 
+<span class="c1"># This founction is to plot the word cloud of comments</span>
 <span class="k">def</span> <span class="nf">wc</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">bgcolor</span><span class="p">,</span><span class="n">title</span><span class="p">):</span>
-    <span class="c1"># This founction is to plot the word cloud of comments</span>
+
+    
+    <span class="sd">&quot;&quot;&quot;Summary or Description of the Function</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    data (list): The list of split words </span>
+<span class="sd">    bgcolor (str): The color of background </span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    image:Returning the picture of word cloud</span>
+
+<span class="sd">   &quot;&quot;&quot;</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
     <span class="n">wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">background_color</span> <span class="o">=</span> <span class="n">bgcolor</span><span class="p">,</span> <span class="n">max_words</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>  <span class="n">max_font_size</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span>
     <span class="n">wc</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
@@ -16310,6 +16322,16 @@ the propert type "Villa" has the biggest price range among other propert types.<
 <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">reviews_boston_polarity_desc</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This founction is to count all types of comments.</span>
+<span class="sd">    </span>
+<span class="sd">    Summary or Description of the Function</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    reviews_seattle_polarity_desc (DataFrame): The table includes each comments with  the sentiment and polarity.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    string:Returning the Sentiment type of each comment.</span>
+
+
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">reviews_boston_polarity_desc</span><span class="p">[</span><span class="s1">&#39;sentiment&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">val</span> <span class="o">=</span> <span class="s2">&quot;Positive&quot;</span>   
@@ -16467,6 +16489,19 @@ the propert type "Villa" has the biggest price range among other propert types.<
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Clean property_type category to 5 categories</span>
 <span class="k">def</span> <span class="nf">property_type_process</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This founction is to clean property_type category to 5 categories.</span>
+<span class="sd">    </span>
+<span class="sd">    Summary or Description of the Function</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    value (series): The column ‘property_type’ of ‘lists_boston_data’.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    string:Returning the new property type.</span>
+
+
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">value</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;House&#39;</span><span class="p">,</span> <span class="s1">&#39;Apartment&#39;</span><span class="p">,</span> <span class="s1">&#39;Touwnhouse&#39;</span><span class="p">,</span> <span class="s1">&#39;Condominium&#39;</span><span class="p">]:</span>
         <span class="k">return</span> <span class="s1">&#39;Other&#39;</span>
     <span class="k">return</span> <span class="n">value</span>
@@ -17101,6 +17136,17 @@ Name: price, dtype: float64</pre>
     
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This founction is to do further data cleaning and Dummy the categorical variables.</span>
+<span class="sd">    </span>
+<span class="sd">    Summary or Description of the Function</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    df (dataframe): The table of ‘lists_seattle_data’.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    X(dataframe)：Returning the new table without the columns &#39;price&#39; and other columns.</span>
+<span class="sd">    y(series)：Returning the column &#39;price&#39;.</span>
+
+
 <span class="sd">    &quot;&quot;&quot;</span>
     
     
